@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Convite Aryele</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #f5a623, #f76b8a);
+            color: white;
+            text-align: center;
+        }
+        .container {
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        .container h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        .container p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        .buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+        .button {
+            padding: 10px 20px;
+            font-size: 1em;
+            color: #f76b8a;
+            background: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .button:hover {
+            background: #f5a623;
+            color: white;
+        }
+        .no-button {
+            position: relative;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const noButton = document.querySelector(".no-button");
+            noButton.addEventListener("mouseover", () => {
+                const x = Math.random() * (window.innerWidth - noButton.offsetWidth);
+                const y = Math.random() * (window.innerHeight - noButton.offsetHeight);
+                noButton.style.position = "absolute";
+                noButton.style.left = `${x}px`;
+                noButton.style.top = `${y}px`;
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Convite Especial</h1>
+        <p>Aryele queria saber se você gostaria de sair comigo!! hahaha 🥰</p>
+        <div class="buttons">
+            <button class="button">Sim</button>
+            <button class="button no-button">Não</button>
+        </div>
+    </div>
+</body>
+</html>
